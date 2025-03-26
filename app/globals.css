@@ -1,0 +1,15 @@
+body {
+  font-family: 'Figtree', sans-serif;
+  .edit-button{
+      width: 50%;
+      height: 44px;
+      border: 1px solid rgba(208, 213, 221, 1);
+      border-radius:8px;
+      color:rgba(52, 64, 84, 1);
+      font-family: 'Figtree', sans-serif;
+    }
+    .submit-button, .title, .text, .add-button{
+      font-family: 'Figtree', sans-serif;
+    }
+}
+
