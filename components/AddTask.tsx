@@ -39,10 +39,19 @@ const Wrapper = styled('div')`
   }
   
 `
-
 export default function AddTask() {
 
   const {task, setTask, addTask } = useTaskStore();  
+
+    const HandleAddClick = () => {
+    if (task.trim()) {
+      addTask();
+      toast.success('Task added successfully!');
+    } else {
+      toast.error('Empty Task!');
+    }
+  };
+
 
   return (
     <div>
@@ -54,12 +63,9 @@ export default function AddTask() {
         value={task}
         onChange={(e) => setTask(e.target.value)}
       />
-      <Button className='add-button' onClick={() => { addTask(); 
-            toast.success('Task added successfully!',);    
-            }}>Add</Button>
+      <Button className='add-button' onClick={HandleAddClick}>Add</Button>
       </form>
      </Wrapper>
      </div>
-    
   );
 }    

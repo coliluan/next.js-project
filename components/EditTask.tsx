@@ -11,7 +11,6 @@ import { toast } from 'sonner';
 
 
 const StyledDialog = styled(Dialog)`
-
   .MuiDialog-paper {
     border-radius: 12px;
     width: 100%;
@@ -64,7 +63,6 @@ const StyledDialog = styled(Dialog)`
     padding: 0px;
   }
 `;
-
 interface EditDialogProps {
   open: boolean;
   taskName: string;
@@ -86,8 +84,6 @@ export default function EditDialog({ open, taskName,taskIndex, onClose, onSave }
     onSave(newTaskName);
     toast.success('Task updated successfully!');  
   };
-
-  
 
   return (
       <StyledDialog
